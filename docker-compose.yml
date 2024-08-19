@@ -1,0 +1,12 @@
+services:
+  molprobity:
+    image: dawidgrajek1/molprobity:latest
+    restart: always
+    ports:
+      - 3001:3001
+    volumes:
+      - user_data:/user_data
+
+volumes:
+  user_data:
+    driver: local
